@@ -1,4 +1,5 @@
 import React from "react";
+import { InputBox } from "./InputBox";
 import { TodoItemList } from "./TodoItemList";
 
 export class App extends React.Component<
@@ -18,12 +19,23 @@ export class App extends React.Component<
 
   render() {
     return (
-      <TodoItemList
-        items={this.state.items}
-        removeItem={index => this.removeItem(index)}
-        checkItem={index => this.checkItem(index)}
-      />
+      <>
+        <h1>Todo List</h1>
+        <InputBox addItem={desc => this.addItem(desc)} />
+        <TodoItemList
+          items={this.state.items}
+          removeItem={index => this.removeItem(index)}
+          checkItem={index => this.checkItem(index)}
+        />
+      </>
     );
+  }
+
+  addItem(description: string) {
+    const items = this.state.items.concat([
+      { description, done: false }
+    ]);
+    this.setState({ items });
   }
 
   removeItem(index: number) {
