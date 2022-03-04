@@ -15,7 +15,7 @@ export class TodoItem extends React.Component<{
           checked={done}
           onClick={() => this.props.checkItem(this.props.index)}
         />
-        {description}
+        { done ? <del>{description}</del> : description }
         <button onClick={() => this.props.removeItem(this.props.index)}>
           delete
         </button>

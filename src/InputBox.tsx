@@ -23,14 +23,18 @@ export class InputBox extends React.Component<{
 
   render() {
     return (
-      <>
+      <div className="input-container">
         <input
           type="text"
           value={this.state.text}
           onChange={this.handleChange}
+          className="input-box"
         />
-        <button onClick={() => this.addItem()}>add</button>
-      </>
+        <button
+          onClick={() => this.addItem()}
+          className="input-button"
+        >Add</button>
+      </div>
     );
   }
 }

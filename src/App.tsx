@@ -19,15 +19,15 @@ export class App extends React.Component<
 
   render() {
     return (
-      <>
-        <h1>Todo List</h1>
+      <main>
+        <h1 className="title">Todo List</h1>
         <InputBox addItem={desc => this.addItem(desc)} />
         <TodoItemList
           items={this.state.items}
           removeItem={index => this.removeItem(index)}
           checkItem={index => this.checkItem(index)}
         />
-      </>
+      </main>
     );
   }
 

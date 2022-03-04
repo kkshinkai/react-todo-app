@@ -8,7 +8,7 @@ export class TodoItemList extends React.Component<{
 }> {
   render() {
     return (
-      <ul>
+      <ul className="todo-list">
         {
           this.props.items.map((item, index) =>
             <TodoItem

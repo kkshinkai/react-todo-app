@@ -1,3 +1,67 @@
 body {
   margin: 1em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+h1.title {
+  font-size: 2em;
+  margin: 2em 1em 1em;
+  text-align: center;
+}
+
+div.input-container {
+  margin: 1em auto;
+  width: 400px;
+  max-width: 80%;
+  border: 3px solid #949494;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+input.input-box {
+  font-size: 18px;
+  padding: 3px 10px;
+  width: calc(100% - 104px);
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+button.input-button {
+  width: 80px;
+  height: 25px;
+  font-size: 16px;
+  margin: 5px;
+  border: 0;
+  border-radius: 10px;
+}
+
+ul.todo-list {
+  list-style: none;
+  font-size: 17px;
+}
+
+ul.todo-list li {
+  display:flex;
+  align-items: center;
+  margin: 0.5em;
+  vertical-align: center;
+}
+
+ul.todo-list li input[type="checkbox"] {
+  margin: 0 1em;
+  width: 2em;
+  height: 2em;
+}
+
+ul.todo-list li button {
+  margin: 0 1em;
+  height: 2em;
+}
+
+ul.todo-list li del {
+  color: #949494;
 }
